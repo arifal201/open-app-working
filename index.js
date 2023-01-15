@@ -1,4 +1,3 @@
-//running docker with nodejs
 var exec = require('child_process').execFile;
 var fun = function(){
   exec("/mnt/c/Program Files/Docker/Docker/Docker Desktop.exe", function(err,data){
@@ -18,6 +17,11 @@ var fun = function(){
   });
   exec("/mnt/c/Users/ASUS/AppData/Local/Programs/Microsoft VS Code/Code.exe", function(err,data){
     console.log('open vscode');
+    console.log(err);
+    console.log(data.toString());
+  });
+    exec("/mnt/c/Users/ASUS/AppData/Local/Microsoft/WindowsApps/wt.exe", function(err,data){
+    console.log('open terminal');
     console.log(err);
     console.log(data.toString());
   });
