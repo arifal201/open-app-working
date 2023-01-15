@@ -22,13 +22,4 @@ var fun = function(){
     console.log(data.toString());
   });
 }
-//open terminal
-//C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps\wt.exe
-
-//open postman
-//C:\Users\ASUS\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Postman\Postman.exe
-//C:\Users\ASUS\AppData\Local\Postman\Postman.exe
-
-//open vscode
-//C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\Code.exe
 fun();
