@@ -1,3 +1,10 @@
+import process from 'process';
+
+process.report.reportOnFatalError = true;
+process.report.reportOnSignal = true;
+process.report.reportOnUncaughtException = true;
+process.report.filename = 'report.json';
+
 import ChildProcess from 'child_process';
 const exec = ChildProcess.execFile;
 const command = exec("sleep 60");
