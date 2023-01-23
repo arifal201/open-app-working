@@ -1,4 +1,5 @@
-const exec = require('child_process').execFile;
+import ChildProcess from 'child_process';
+const exec = ChildProcess.execFile;
 const command = exec("sleep 60");
 let openWorkApps = function(){
   exec("/mnt/c/Program Files/Docker/Docker/Docker Desktop.exe", function(err,data){
@@ -45,13 +46,13 @@ let openWorkApps = function(){
       command.kill()
     }, 1000)
   });
-  exec('ls', function(err, output){
+  exec('ls', function(err, stdout, stderr){
     console.log('try running ls');
     if(err){
       console.error(err);
       return
     }
-    console.log(output);
+    console.log(stdout);
     setTimeout(() => {
       command.kill()
     }, 1000)
