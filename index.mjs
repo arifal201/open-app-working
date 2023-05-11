@@ -8,7 +8,7 @@ process.report.filename = 'report.json';
 import ChildProcess from 'child_process';
 const exec = ChildProcess.execFile;
 const command = exec("sleep 60");
-let openWorkApps = function(){
+const openWorkApps = function(){
   exec("/mnt/c/Program Files/Docker/Docker/Docker Desktop.exe", function(err,data){
     console.log('open docker');
     if(err){
@@ -53,16 +53,6 @@ let openWorkApps = function(){
       command.kill()
     }, 1000)
   });
-  exec('ls', function(err, stdout, stderr){
-    console.log('try running ls');
-    if(err){
-      console.error(err);
-      return
-    }
-    console.log(stdout);
-    setTimeout(() => {
-      command.kill()
-    }, 1000)
-  });
 }
 openWorkApps();
+process.exit(0);
